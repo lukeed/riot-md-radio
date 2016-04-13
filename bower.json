@@ -9,7 +9,12 @@
     "riot",
     "riotjs",
     "riot-tag",
-    "md-radio"
+    "md-radio",
+    "animated",
+    "material",
+    "design",
+    "radio",
+    "input"
   ],
   "main": "md-radio.tag",
   "moduleType": [

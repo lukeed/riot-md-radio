@@ -15,7 +15,12 @@
     "riot",
     "riotjs",
     "riot-tag",
-    "md-radio"
+    "md-radio",
+    "animated",
+    "material",
+    "design",
+    "radio",
+    "input"
   ],
   "scripts": {
     "test": "echo No tests specified.",
