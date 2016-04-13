@@ -1,7 +1,7 @@
 {
   "name": "md-radio",
   "description": "Material Design animated radio input",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "repository": "https://github.com/lukeed/riot-md-radio",
   "main": "md-radio.js",
