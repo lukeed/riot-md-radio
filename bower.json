@@ -1,7 +1,7 @@
 {
   "name": "riot-md-radio",
   "version": "0.0.0",
-  "description": "Material Design animated radio input",
+  "description": "Material Design animated Radio input, for Riot.js",
   "authors": [
     {"name": "Luke Edwards", "email": "luke@lukeed.com", "homepage": "https://lukeed.com"}
   ],
