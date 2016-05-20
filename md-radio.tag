@@ -26,8 +26,4 @@
 			return this.onToggle();
 		}.bind(this));
 	</script>
-
-	<style>
-		@import "md-radio.sass";
-	</style>
 </md-radio>
