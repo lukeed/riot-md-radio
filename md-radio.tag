@@ -14,16 +14,19 @@
 	</label>
 
 	<script>
-		onToggle(e) {
+		var self = this;
+
+		self.onToggle = function (e) {
 			if (opts.ontoggle) {
 				opts.ontoggle(e);
 			}
-			this.el.value = this.el.checked ? (opts.value || 1) : null;
-		}
 
-		this.on('mount', function () {
-			this.el = this.root.firstElementChild.firstElementChild;
-			return this.onToggle();
-		}.bind(this));
+			self.el.value = self.el.checked ? (opts.value || 1) : null;
+		};
+
+		self.on('mount', function () {
+			self.el = self.root.firstElementChild.firstElementChild;
+			return self.onToggle();
+		});
 	</script>
 </md-radio>
