@@ -16,30 +16,30 @@
 
 	<script>
 		var self = this;
-		var ran = false;
 
 		self.onToggle = function (e) {
 			self.input.value = self.input.checked ? (opts.value || 1) : null;
-			e && opts.ontoggle && opts.ontoggle(e);
-			ran && self.onBlur();
+			if (e) {
+				opts.ontoggle && opts.ontoggle(e);
+				self.onBlur();
+			}
 		};
 
 		self.onBlur = function () {
-			ran = true;
 			self.parent.trigger('validate');
 		};
 
 		self.on('mount', function () {
 			self.input = self.root.firstElementChild.firstElementChild;
-			return self.onToggle();
+			return self.onToggle(); // set initial value
 		});
 
 		// reset only if self aware
 		self.reset = function () {
-			if (!self.input) return;
-			ran = false;
-			self.onBlur();
-			return self.parent.trigger('reset');
+			if (self.input) {
+				self.onBlur(); // clear errors
+				self.parent.trigger('reset');
+			}
 		};
 	</script>
 </md-radio>
