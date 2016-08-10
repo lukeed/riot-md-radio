@@ -1,7 +1,8 @@
 <md-radio>
 	<label class="md-radio {has__text: opts.text}">
 		<input id="{ opts.input }" name="{ opts.input }"
-			type="radio" checked="{ opts.check }" onclick="{ onToggle }">
+			type="radio" checked="{ opts.check }"
+			onclick="{ onToggle }" onblur="{ onBlur }">
 
 		<span class="md-radio__fake">
 			<span></span>
@@ -15,18 +16,30 @@
 
 	<script>
 		var self = this;
+		var ran = false;
 
 		self.onToggle = function (e) {
-			if (opts.ontoggle) {
-				opts.ontoggle(e);
-			}
+			self.input.value = self.input.checked ? (opts.value || 1) : null;
+			e && opts.ontoggle && opts.ontoggle(e);
+			ran && self.onBlur();
+		};
 
-			self.el.value = self.el.checked ? (opts.value || 1) : null;
+		self.onBlur = function () {
+			ran = true;
+			self.parent.trigger('validate');
 		};
 
 		self.on('mount', function () {
-			self.el = self.root.firstElementChild.firstElementChild;
+			self.input = self.root.firstElementChild.firstElementChild;
 			return self.onToggle();
 		});
+
+		// reset only if self aware
+		self.reset = function () {
+			if (!self.input) return;
+			ran = false;
+			self.onBlur();
+			return self.parent.trigger('reset');
+		};
 	</script>
 </md-radio>
