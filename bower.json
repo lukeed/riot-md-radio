@@ -1,37 +1,38 @@
 {
-  "name": "riot-md-radio",
-  "version": "1.0.1",
-  "description": "Material Design animated Radio input, for Riot.js",
-  "authors": [
-    {"name": "Luke Edwards", "email": "luke@lukeed.com", "homepage": "https://lukeed.com"}
-  ],
-  "keywords": [
-    "riot",
-    "riotjs",
-    "riot-tag",
-    "md-radio",
-    "animated",
-    "material",
-    "design",
-    "radio",
-    "input"
-  ],
-  "main": "md-radio.tag",
-  "moduleType": [
-    "amd"
-  ],
-  "license": "MIT",
-  "homepage": "https://github.com/lukeed/riot-md-radio/",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "riot": "^2.3.0"
-  },
-  "devDependencies": {
-  }
+	"name": "riot-md-radio",
+	"description": "Material Design animated Radio input for Riot.js",
+	"authors": [{
+		"name": "Luke Edwards",
+		"email": "luke@lukeed.com",
+		"homepage": "https://lukeed.com"
+	}],
+	"keywords": [
+		"riot",
+		"riotjs",
+		"riot-tag",
+		"riot-md",
+		"md-radio",
+		"animated",
+		"material design",
+		"radio",
+		"input"
+	],
+	"main": "md-radio.tag",
+	"moduleType": [
+		"amd"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/lukeed/riot-md-radio/",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"riot": "^2.5.0",
+		"md-colors": "^1.0.0"
+	},
+	"devDependencies": {}
 }
