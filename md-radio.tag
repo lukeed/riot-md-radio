@@ -1,7 +1,6 @@
-<md-radio class="md-radio">
+<md-radio class="md-radio" onclick="{ onToggle }" onblur="{ onBlur }">
 	<input id="{ opts.input }" name="{ opts.input }"
-		type="radio" checked="{ opts.check }"
-		onclick="{ onToggle }" onblur="{ onBlur }">
+		type="radio" checked="{ opts.check }">
 
 	<span class="md-radio__fake">
 		<span></span>
@@ -18,6 +17,7 @@
 		self.onToggle = function (e) {
 			self.input.value = self.input.checked ? (opts.value || 1) : null;
 			if (e) {
+				self.input.checked = !self.input.checked;
 				opts.ontoggle && opts.ontoggle(e);
 				self.onBlur();
 			}
